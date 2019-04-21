@@ -1,8 +1,8 @@
 from app import app
 from flask import session,render_template,redirect,url_for, request
-import bi.bi_index as bi_index
+import models.indexModel as indexModel
 
 @app.route("/otro")
 def otro():
 
-    return bi_index.index()
+    return indexModel.index()

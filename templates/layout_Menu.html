@@ -1,0 +1,18 @@
+<ul class="vertical menu accordion-menu" data-accordion-menu>
+    <li><a href="" id="Name"> {{ session['user'] }} </a></li>
+    <li><a href=""> Mi perfil </a></li>
+    <li>
+        <a href="#">Buscar</a>
+        <ul class="menu vertical nested">
+        <li><a href="#">PerfilesConocidos</a></li>
+        <li><a href="#">Descubre</a></li>
+        </ul>
+    </li>
+    <li><a href="{{ url_for('logout') }}">Salir</a></li>
+</ul>
+
+<style>
+    #Name{
+        color: black !important; 
+    }
+</style>

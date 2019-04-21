@@ -9,11 +9,16 @@
     <link rel="stylesheet" href="{{ url_for('static',filename='css/foundation.css')}}">
 </head>
 <body>
-    <div class="grid-container">
+    <div class="grid-container full">
         <div class="grid-x grid-padding-x">
-    {% block content %}
-    
-    {% endblock %}
+            <div class="columns small-2">
+                {% include 'layout_Menu.html' %}
+            </div>
+            <div class="columns small-10">
+                {% block content %}
+                
+                {% endblock %}
+            </div>
         </div>
     </div>
     <script src="{{ url_for('static',filename='js/vendor/jquery.js')}}"></script>
