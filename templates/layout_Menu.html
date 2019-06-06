@@ -1,6 +1,6 @@
 <ul class="vertical menu accordion-menu" data-accordion-menu>
     <li><a href="" id="Name"> {{ session['user'] }} </a></li>
-    <li><a href=""> Mi perfil </a></li>
+    <li><a href="{{ url_for('perfil') }}"> Mi perfil </a></li>
     <li>
         <a href="#">Buscar</a>
         <ul class="menu vertical nested">

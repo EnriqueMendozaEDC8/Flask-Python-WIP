@@ -1,5 +1,6 @@
 from app import app
 from flask import session,render_template,redirect,url_for, request
+from controllers.perfilController import *
 import models.indexModel as indexModel
 
 @app.route("/")
