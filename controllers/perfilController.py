@@ -8,3 +8,7 @@ def perfil():
 @app.route("/editarPerfil",methods = ['POST', 'GET'])
 def editarPerfil():
      return render_template('perfil/editarperfil.html')
+
+@app.route("/guardarPerfil",methods = ['POST', 'GET'])
+def guardarPerfil():
+     return redirect(url_for('perfil'))

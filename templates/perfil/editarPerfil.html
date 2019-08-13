@@ -2,31 +2,33 @@
 
 {% block content %}
 
-<div class="grid-container fluid">
-    <div class="grid-x  grid-padding-x">
-        <div class="columns medium-4">
-            <label for="exampleFileUpload" class="button">Upload File</label>
-            <input type="file" id="exampleFileUpload" class="show-for-sr">
-        </div>
-        <div class="columns medium-4">
-            <label>Input Label
-                <input type="text" placeholder=".medium-6.cell">
-              </label>
-        </div>
-        <div class="columns medium-4">
-            <label>Input Label
-                <input type="text" placeholder=".medium-6.cell">
-              </label>
-        </div>
-        
-        <div class="columns medium-10">
-        </div>
-        <div class="columns medium-1">
-            <a class="button secondary" style="width: 95%;" href="{{ url_for('perfil') }}">Guardar</a>
-        </div>
-        <div class="columns medium-1">
-            <a class="button alert" style="width: 95%;" href="{{ url_for('perfil') }}" >Cancelar</a>
+<form action="{{ url_for('guardarPerfil') }}" method="post">
+    <div class="grid-container fluid">
+        <div class="grid-x  grid-padding-x">
+            <div class="columns medium-4">
+                <label for="exampleFileUpload" class="button">Upload File</label>
+                <input type="file" id="exampleFileUpload" class="show-for-sr">
+            </div>
+            <div class="columns medium-4">
+                <label>Input Label
+                    <input type="text" placeholder=".medium-6.cell">
+                </label>
+            </div>
+            <div class="columns medium-4">
+                <label>Input Label
+                    <input type="text" placeholder=".medium-6.cell">
+                </label>
+            </div>
+            
+            <div class="columns medium-10">
+            </div>
+            <div class="columns medium-1">
+                <button type="submit" id="login" class="button secondary" style="width: 95%;">Guardar</button>
+            </div>
+            <div class="columns medium-1">
+                <a class="button alert" style="width: 95%;" href="{{ url_for('perfil') }}" >Cancelar</a>
+            </div>
         </div>
     </div>
-</div>
+</form>
 {% endblock %}
