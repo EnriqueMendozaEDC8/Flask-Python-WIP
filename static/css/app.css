@@ -1,8 +1,14 @@
 .menu-acordeon{
     background-color: rgb(48, 48, 48);
     height: -webkit-fill-available;
+    min-height: 100vh;
 }
 .information{
     background-color: rgb(206, 206, 206);
     height: -webkit-fill-available;
+    min-height: 100vh;
+}
+/*Menu Styles*/
+#Name{
+    color: black !important; 
 }

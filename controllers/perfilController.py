@@ -3,12 +3,18 @@ from flask import session,render_template,redirect,url_for, request
 
 @app.route("/perfil",methods = ['POST', 'GET'])
 def perfil():
-     return render_template('perfil/perfil.html')
-     
+     if 'user' in session:
+        return render_template('perfil/perfil.html')
+     return redirect(url_for('index'))
+
 @app.route("/editarPerfil",methods = ['POST', 'GET'])
 def editarPerfil():
-     return render_template('perfil/editarperfil.html')
+     if 'user' in session:
+        return render_template('perfil/editarperfil.html')
+     return redirect(url_for('index'))
 
 @app.route("/guardarPerfil",methods = ['POST', 'GET'])
 def guardarPerfil():
-     return redirect(url_for('perfil'))
+     if 'user' in session:
+          return redirect(url_for('perfil'))
+     return redirect(url_for('index'))
