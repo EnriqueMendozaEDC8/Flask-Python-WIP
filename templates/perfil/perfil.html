@@ -5,25 +5,42 @@
 <div class="grid-container fluid information">
     <div class="grid-x">
         <div class="columns medium-4">
-            <h1>Picture</h1>
+            <h1>{{data.user}}</h1>
         </div>
         <div class="columns medium-8">
             <div class="grid-x">
                 <div class="columns medium-6">
                     <h3>Datos Personales</h3>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque maxime modi magni deserunt dolores repellat itaque totam dolorem, omnis cumque quibusdam. Ratione aliquid velit libero omnis laudantium. Nobis, laudantium quae?
+                    <p>Nombre: {{data.lastname}} {{data.firstname}} <br>
+                    Correo: {{data.email}}<br>
+                    Telefono: {{data.phone}}<br>
+                    Carrera: {{data.career}} </p>
                 </div>
                 <div class="columns medium-6">
                     <h3>Escolaridad</h3>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque maxime modi magni deserunt dolores repellat itaque totam dolorem, omnis cumque quibusdam. Ratione aliquid velit libero omnis laudantium. Nobis, laudantium quae?
+                    {% for academic in data.academicbackground %}
+                         <p><b>{{academic.school}}</b></br>
+                        {{academic.career}}</br>
+                        {{academic.time}}</p>
+                    {% endfor %}
                 </div>
                 <div class="columns medium-6">
                     <h3>Experiencia laboral</h3>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque maxime modi magni deserunt dolores repellat itaque totam dolorem, omnis cumque quibusdam. Ratione aliquid velit libero omnis laudantium. Nobis, laudantium quae?
+                    <p>
+                        {% for workexperience in data.workexperience %}
+                            <b>{{workexperience.company}}</b>
+                            {{workexperience.job}}</br>
+                            De: {{workexperience.startdate}} a {{workexperience.endtdate}}</br></br>
+                        {% endfor %}
+                    </p>
                 </div>
                 <div class="columns medium-6">
-                    <h3>Datos Personales</h3>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque maxime modi magni deserunt dolores repellat itaque totam dolorem, omnis cumque quibusdam. Ratione aliquid velit libero omnis laudantium. Nobis, laudantium quae?
+                    <h3>Soft skills</h3>
+                    <p>
+                        {% for softskills in data.softskills %}
+                            {{softskills}}</br>
+                        {% endfor %}
+                    </p>
                 </div>
             </div>
         </div>

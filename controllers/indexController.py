@@ -1,8 +1,6 @@
 from app import app
 from flask import session,render_template,redirect,url_for, request
 
-
-
 from controllers.perfilController import *
 from controllers.apiController import *
 import models.indexModel as indexModel
