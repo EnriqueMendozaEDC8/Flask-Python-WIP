@@ -11,7 +11,7 @@ from controllers.indexController import *
 from controllers.other import *
 
 if __name__ == '__main__':
-    IP = "192.168.0.12"
+    IP = "localhost"#"192.168.0.123"
     PORT = 8080
     app.run(
         host=app.config.get("HOST", IP),
